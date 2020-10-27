@@ -141,6 +141,11 @@ AddEventHandler('esx_newaccessories:shoes', function()
 	end)
 end)
 
+RegisterNetEvent('esx_newaccessories:setunsetaccessory')
+AddEventHandler('esx_newaccessories:setunsetaccessory', function(accessory)
+	SetUnsetAccessory(accessory)
+end)
+
 function SetUnsetAccessory(accessory)
 	ESX.TriggerServerCallback('esx_newaccessories:get', function(hasAccessory, accessorySkin)
 		local _accessory = string.lower(accessory)
